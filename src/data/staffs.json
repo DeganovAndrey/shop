@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Стул серый",
+    "img": "stul.jpg",
+    "desc": "Какой хороший стул",
+    "category": "chairs",
+    "price": "49.99"
+  },
+  {
+    "id": 10,
+    "title": "Диван красный",
+    "img": "sofa.jpg",
+    "desc": "Какой мягкий диван",
+    "category": "sofa",
+    "price": "49.99"
+  },
+  {
+    "id": 12,
+    "title": "Стол голубой",
+    "img": "table.jpg",
+    "desc": "Мммм стол",
+    "category": "tables",
+    "price": "49.99"
+  },
+  {
+    "id": 16,
+    "title": "Лампа",
+    "img": "lampa.jpg",
+    "desc": "Вайая какой яркий",
+    "category": "lights",
+    "price": "49.99"
+  },
+  {
+    "id": 19,
+    "title": "Умывальник деревянный",
+    "img": "umivalnik.webp",
+    "desc": "Такого ты еще не видел",
+    "category": "washes",
+    "price": "49.99"
+  },
+  {
+    "id": 31,
+    "title": "Дверь черная",
+    "img": "door.jpg",
+    "desc": "Не поверишь, но дверь черная",
+    "category": "doors",
+    "price": "49.99"
+  }
+]
