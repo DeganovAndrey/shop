@@ -7,12 +7,16 @@ function App() {
   const [orders, setOrders] = useState([]);
 
   const addToOrder = (item) => {
-    setOrders({ orders: [...orders, item] });
+    let isInArray = false;
+    orders.forEach((order) => {
+      if (order.id === item.id) isInArray = true;
+    });
+    if (!isInArray) setOrders([...orders, item]);
   };
 
   return (
     <div className="wrapper">
-      <Header />
+      <Header orders={orders} />
       <Items addToOrder={addToOrder} />
       <Footer />
     </div>

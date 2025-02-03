@@ -13,7 +13,7 @@
     "img": "sofa.jpg",
     "desc": "Какой мягкий диван",
     "category": "sofa",
-    "price": "49.99"
+    "price": "549.99"
   },
   {
     "id": 12,
@@ -21,7 +21,7 @@
     "img": "table.jpg",
     "desc": "Мммм стол",
     "category": "tables",
-    "price": "49.99"
+    "price": "265"
   },
   {
     "id": 16,
@@ -29,7 +29,7 @@
     "img": "lampa.jpg",
     "desc": "Вайая какой яркий",
     "category": "lights",
-    "price": "49.99"
+    "price": "35"
   },
   {
     "id": 19,
@@ -37,7 +37,7 @@
     "img": "umivalnik.webp",
     "desc": "Такого ты еще не видел",
     "category": "washes",
-    "price": "49.99"
+    "price": "399.99"
   },
   {
     "id": 31,
@@ -45,6 +45,6 @@
     "img": "door.jpg",
     "desc": "Не поверишь, но дверь черная",
     "category": "doors",
-    "price": "49.99"
+    "price": "999.99"
   }
 ]
