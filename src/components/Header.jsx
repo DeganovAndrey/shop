@@ -2,14 +2,24 @@ import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import Order from "./Order";
 
-const Header = ({ orders }) => {
+const Header = ({ orders, onDelete }) => {
   let [cartOpen, setCartOpen] = useState(false);
+
   const handleCartOpen = () => {
     setCartOpen((cartOpen = !cartOpen));
   };
 
   const showOrders = (orders) => {
-    return orders.map((order) => <Order key={order.id} item={order} />);
+    let summa = 0;
+    orders.forEach((order) => (summa += Number.parseFloat(order.price)));
+    return (
+      <div>
+        {orders.map((order) => (
+          <Order key={order.id} item={order} onDelete={onDelete} />
+        ))}
+        <p className="summa">Итоговая сумма: {summa.toFixed(2)}$</p>
+      </div>
+    );
   };
 
   const showNothing = () => {

@@ -14,9 +14,13 @@ function App() {
     if (!isInArray) setOrders([...orders, item]);
   };
 
+  const deleteOrder = (id) => {
+    setOrders(orders.filter((order) => order.id !== id));
+  };
+
   return (
     <div className="wrapper">
-      <Header orders={orders} />
+      <Header orders={orders} onDelete={deleteOrder} />
       <Items addToOrder={addToOrder} />
       <Footer />
     </div>
