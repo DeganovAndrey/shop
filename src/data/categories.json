@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Все",
+    "key": "all"
+  },
+  {
+    "name": "Стулья",
+    "key": "chairs"
+  },
+  {
+    "name": "Диваны",
+    "key": "sofa"
+  },
+  {
+    "name": "Столы",
+    "key": "tables"
+  },
+  {
+    "name": "Лампы",
+    "key": "lights"
+  },
+  {
+    "name": "Умывальники",
+    "key": "washes"
+  },
+  {
+    "name": "Двери",
+    "key": "doors"
+  }
+]
