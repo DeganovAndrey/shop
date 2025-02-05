@@ -1,0 +1,32 @@
+.item {
+  width: 100%;
+  background: #eaeaea;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.item .deleteItem {
+  color: #ca5252;
+  float: right;
+  position: relative;
+  top: -40px;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+.item .deleteItem:hover {
+  color: #d83030;
+  transform: scale(1.5);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+.item img:hover {
+  transform: scale(1.05);
+}

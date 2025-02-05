@@ -1,0 +1,104 @@
+.menu {
+  position: relative;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  padding: 40px 0 40px 0;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.nav {
+  float: right;
+  list-style: none;
+}
+
+.nav li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+.nav li:hover {
+  opacity: 0.6;
+}
+
+.nav li:active {
+  opacity: 0.3;
+}
+
+.shopCartButton {
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+.shopCartButton:hover,
+.shopCartButton:active {
+  color: #dc3d3d;
+  transform: scale(1.15);
+}
+
+.shopCart {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  width: 450px;
+  background: #e7e7e7;
+  -webkit-box-shadow: 4px 5px 15px -7px #606060;
+  box-shadow: 4px 5px 15px -7px #606060;
+  z-index: 1000;
+  border-radius: 2px;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.item {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+.shopCart img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+.item h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  color: #797979;
+  font-weight: 600;
+}
+
+.empty h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.delete-item {
+  color: #ca5252;
+  float: right;
+  position: relative;
+  top: -40px;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+.delete-item:hover {
+  color: #d83030;
+  transform: scale(1.5);
+}
+
+.summa {
+  float: left;
+  width: 100%;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
