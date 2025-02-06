@@ -10,22 +10,9 @@ import items from "./../src/data/staffs.json";
 import AllItems from "./page/AllItems";
 
 function App() {
-  const [orders, setOrders] = useState([]);
   const [currentItems, setCurrentItems] = useState([...items]);
   const [showFullItems, setShowFullItems] = useState(false);
   const [fullItem, setFullItem] = useState({});
-
-  const addToOrder = (item) => {
-    let isInArray = false;
-    orders.forEach((order) => {
-      if (order.id === item.id) isInArray = true;
-    });
-    if (!isInArray) setOrders([...orders, item]);
-  };
-
-  const deleteOrder = (id) => {
-    setOrders(orders.filter((order) => order.id !== id));
-  };
 
   const chooseCategory = (category) => {
     if (category === "all") {
@@ -44,10 +31,7 @@ function App() {
     <BrowserRouter>
       <div className="wrapper">
         <Routes>
-          <Route
-            path="/"
-            element={<MainLayout orders={orders} onDelete={deleteOrder} />}
-          >
+          <Route path="/" element={<MainLayout />}>
             <Route
               index
               element={
@@ -55,7 +39,6 @@ function App() {
                   chooseCategory={chooseCategory}
                   onShowItem={onShowItem}
                   currentItems={currentItems}
-                  addToOrder={addToOrder}
                   item={fullItem}
                 />
               }

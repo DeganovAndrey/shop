@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Order from "../Order/Order";
+import { selectOrders } from "../../redux/slices/ordersSlice";
 
 import s from "./Menu.module.css";
 
-const Menu = ({ orders, onDelete }) => {
+const Menu = () => {
+  const orders = useSelector(selectOrders);
+
   let [cartOpen, setCartOpen] = useState(false);
 
   const handleCartOpen = () => {
@@ -18,7 +22,7 @@ const Menu = ({ orders, onDelete }) => {
     return (
       <div>
         {orders.map((order) => (
-          <Order key={order.id} item={order} onDelete={onDelete} />
+          <Order key={order.id} item={order} />
         ))}
         <p className={s.summa}>Итоговая сумма: {summa.toFixed(2)}$</p>
       </div>

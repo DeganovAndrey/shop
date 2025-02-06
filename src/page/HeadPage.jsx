@@ -10,7 +10,6 @@ const HeadPage = ({
   chooseCategory,
   onShowItem,
   currentItems,
-  addToOrder,
   showFullItems,
   fullItem,
 }) => {
@@ -18,17 +17,9 @@ const HeadPage = ({
     <div>
       <Header />
       <Categories chooseCategory={chooseCategory} />
-      <Items
-        onShowItem={onShowItem}
-        addToOrder={addToOrder}
-        items={currentItems}
-      />
+      <Items onShowItem={onShowItem} items={currentItems} />
       {showFullItems && (
-        <ShowFullItem
-          item={fullItem}
-          addToOrder={addToOrder}
-          onShowItem={onShowItem}
-        />
+        <ShowFullItem item={fullItem} onShowItem={onShowItem} />
       )}
       <Footer />
     </div>

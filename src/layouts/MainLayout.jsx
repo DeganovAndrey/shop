@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Menu from "../components/Menu/Menu";
 
-const MainLayout = ({ orders, onDelete }) => {
+const MainLayout = () => {
   return (
     <>
-      <Menu orders={orders} onDelete={onDelete} />
+      <Menu />
       <Outlet />;
     </>
   );
