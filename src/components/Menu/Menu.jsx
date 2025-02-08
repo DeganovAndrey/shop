@@ -16,14 +16,13 @@ const Menu = () => {
     setCartOpen((cartOpen = !cartOpen));
   };
 
-  const showOrders = (orders) => {
+  const showOrders = () => {
     let summa = 0;
     orders.forEach((order) => (summa += Number.parseFloat(order.price)));
     return (
       <div>
-        {orders.map((order) => (
-          <Order key={order.id} item={order} />
-        ))}
+        <Order />
+
         <p className={s.summa}>Итоговая сумма: {summa.toFixed(2)}$</p>
       </div>
     );

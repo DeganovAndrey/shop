@@ -1,19 +1,24 @@
 import { FaTrash } from "react-icons/fa6";
-import { deleteOrder } from "../../redux/slices/ordersSlice";
+import { deleteOrder, selectOrders } from "../../redux/slices/ordersSlice";
 import s from "./Order.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-const Order = ({ item }) => {
+const Order = () => {
   const dispatch = useDispatch();
+  const orders = useSelector(selectOrders);
   return (
-    <div className={s.item}>
-      <img src={"./img/" + item.img} alt="item.title" />
-      <h2>{item.title}</h2>
-      <p>{item.price}$</p>
-      <FaTrash
-        onClick={() => dispatch(deleteOrder(item.id))}
-        className={s.deleteItem}
-      />
+    <div>
+      {orders.map((order) => (
+        <div className={s.item} key={order.id}>
+          <img src={"./img/" + order.img} alt={order.title} />
+          <h2>{order.title}</h2>
+          <p>{order.price}$</p>
+          <FaTrash
+            onClick={() => dispatch(deleteOrder(order.id))}
+            className={s.deleteItem}
+          />
+        </div>
+      ))}
     </div>
   );
 };
